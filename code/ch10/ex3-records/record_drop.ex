@@ -1,7 +1,6 @@
 defmodule RecordDrop do
-
-  def fall_velocity(t=Tower[]) do
-    fall_velocity(t.planemo, t.height)
+  def fall_velocity(Tower[planemo: planemo, height: distance]) do
+    fall_velocity(planemo, distance)
   end
   
   def fall_velocity(:earth, distance) when distance >= 0 do
@@ -15,6 +14,5 @@ defmodule RecordDrop do
   def fall_velocity(:mars, distance) when distance >= 0 do
     :math.sqrt(2 * 3.71 * distance)
   end
-
 end
 

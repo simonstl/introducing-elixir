@@ -1,6 +1,6 @@
 defmodule RecordDrop do
   def fall_velocity(t = Tower[planemo: planemo, height: distance]) do
-    IO.puts("From #{t.name}'s elevation of #{distance} meters on #{planemo}, the object will reach #{fall_velocity(planemo, distance)} m/s before crashing in #{t.location}.")
+    IO.puts("From #{t.name}'s elevation of #{distance} meters on #{planemo}, the object will reach #{fall_velocity(planemo, distance)} m/s before crashing in #{t.location}")
   end
   
   def fall_velocity(:earth, distance) when distance >= 0 do
