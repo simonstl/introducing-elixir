@@ -17,22 +17,22 @@ Which planemo are you on?
     )
 
     answer = IO.gets("Which? > ")
-    value=hd(answer)
+    value=String.first(answer)
     char_to_planemo(value)
   end
   
 defp get_distance() do
    input = IO.gets("How far? (meters) > ")
-   value = String.strip(list_to_binary(input))
+   value = String.strip(input)
    binary_to_integer(value)
 end
 
 defp char_to_planemo(char) do
-   case [char] do
-       '1' -> :earth
-       '2' -> :moon 
-       '3' -> :mars
+   case char do
+       "1" -> :earth
+       "2" -> :moon 
+       "3" -> :mars
    end        
-  end
+end
     
 end
