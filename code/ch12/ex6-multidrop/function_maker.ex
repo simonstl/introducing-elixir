@@ -1,4 +1,4 @@
-defmodule Dynamic do
+defmodule FunctionMaker do
   defmacro create_functions(planemo_list) do
     Enum.map planemo_list, fn {name, gravity} ->
       quote do
