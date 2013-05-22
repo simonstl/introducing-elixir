@@ -12,7 +12,7 @@ defmodule Drop do
   end
   
   def test_fun do
-    fun=function(fall_velocity/1)
+    fun = function(fall_velocity/1)
     fun.(40)
   end
 end
