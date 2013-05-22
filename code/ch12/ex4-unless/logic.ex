@@ -1,11 +1,10 @@
 defmodule Logic do
 
-  defmacro unless(condition, code) do
+  defmacro unless(condition, options) do
     quote do
-      if !(unquote(condition)) do
-        unquote(code)
-      end
-    end
+      if(!unquote(condition), unquote(options))
+    end  
   end
 
 end
+
