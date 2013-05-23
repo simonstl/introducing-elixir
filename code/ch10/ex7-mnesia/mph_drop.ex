@@ -12,7 +12,8 @@ defmodule MphDrop do
         convert(drop_process)
       {planemo, distance, velocity} ->
         mph_velocity = 2.23693629 * velocity
-        IO.puts("On #{planemo}, a fall of #{distance} meters yields a velocity of #{mph_velocity} mph.")
+        IO.write("On #{planemo}, a fall of #{distance} meters ")
+        IO.puts("yields a velocity of #{mph_velocity} mph.")
         convert(drop_process)
     end
   end
