@@ -10,7 +10,7 @@ Which planemo are you on?
  """
     )
 
-    IO.getb("Which? > ")
+    IO.getn("Which? > ")
  
   end
 end
