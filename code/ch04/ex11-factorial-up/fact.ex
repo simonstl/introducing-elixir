@@ -6,7 +6,7 @@ defmodule Fact do
   
   defp factorial(current, n, result) when current <= n do
     new_result = result * current
-    IO.puts("#{current} yields #{new_result}!")
+    IO.puts("#{current} yields #{new_result}.")
     factorial(current+1, n, new_result)
   end
   

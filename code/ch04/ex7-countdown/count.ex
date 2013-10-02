@@ -1,7 +1,7 @@
 defmodule Count do
 
   def countdown(from) when from > 0 do
-    IO.puts(from)
+    IO.inspect(from)
     countdown(from-1)
   end
   

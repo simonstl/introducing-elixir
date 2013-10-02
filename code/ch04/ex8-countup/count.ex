@@ -5,7 +5,7 @@ defmodule Count do
   end
   
   defp countup(count, limit) when count <= limit do
-    IO.puts(count)
+    IO.inspect(count)
     countup(count+1, limit)
   end
   
