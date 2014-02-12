@@ -9,7 +9,7 @@ defmodule MphDrop do
   def convert(pid) do
     receive do
       {planemo, distance} ->
-        pid <- {self(), planemo, distance}
+        send pid, {self(), planemo, distance}
         convert(pid)
       {'EXIT', _pid, _reason} ->
         new_pid = spawn_link(Drop, :drop, [])
@@ -17,7 +17,7 @@ defmodule MphDrop do
       {planemo, distance, velocity} ->
         mph_velocity = 2.23693629 * velocity
         IO.write("On #{planemo}, a fall of #{distance} meters ")
-        IO.puts(yields a velocity of #{mph_velocity} mph.")
+        IO.puts("yields a velocity of #{mph_velocity} mph.")
       convert(pid)
     end
   end

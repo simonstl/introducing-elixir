@@ -2,7 +2,7 @@ defmodule Drop do
   def drop do
     receive do
       {from, planemo, distance} ->
-        from <- {planemo, distance, fall_velocity(planemo, distance)}
+        send from, {planemo, distance, fall_velocity(planemo, distance)}
       drop()
     end
   end

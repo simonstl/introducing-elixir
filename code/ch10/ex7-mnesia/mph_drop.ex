@@ -8,7 +8,7 @@ defmodule MphDrop do
   def convert(drop_process) do
     receive do
       {planemo, distance} ->
-        drop_process <- {self(), planemo, distance}
+        send drop_process, {self(), planemo, distance}
         convert(drop_process)
       {planemo, distance, velocity} ->
         mph_velocity = 2.23693629 * velocity
