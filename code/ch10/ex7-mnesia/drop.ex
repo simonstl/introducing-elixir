@@ -8,7 +8,7 @@ defmodule Drop do
   def handle_drops do
     receive do
       {from, planemo, distance} ->
-        from <- {planemo, distance, fall_velocity(planemo, distance)}
+        send from, {planemo, distance, fall_velocity(planemo, distance)}
         handle_drops
     end
   end

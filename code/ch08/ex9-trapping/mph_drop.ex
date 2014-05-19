@@ -8,7 +8,7 @@ defmodule MphDrop do
   def convert(drop_pid) do
     receive do
       {planemo, distance} ->
-        drop_pid <- {self(), planemo, distance}
+        send drop_pid, {self(), planemo, distance}
         convert(drop_pid)
       {:EXIT, pid, reason} ->
         IO.puts("FAILURE. #{inspect(pid)} #{inspect(reason)}")
