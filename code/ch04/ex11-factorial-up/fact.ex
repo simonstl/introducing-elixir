@@ -10,7 +10,7 @@ defmodule Fact do
     factorial(current+1, n, new_result)
   end
   
-  defp factorial(current, n, result) do
+  defp factorial(_current, _n, result) do
     IO.puts("finished!")
     result
   end
