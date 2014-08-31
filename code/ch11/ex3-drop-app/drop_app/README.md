@@ -1,3 +1,0 @@
-# DropApp
-
-** TODO: Add description **
