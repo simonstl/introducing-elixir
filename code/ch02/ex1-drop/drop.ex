@@ -11,10 +11,6 @@ defmodule Drop do
    3.6 * mps
   end
   
-  def test_fun do
-    fun =  &(fall_velocity/1) # Module.function(Drop, :fall_velocity, 1)
-    fun.(40)
-  end
 end
 
-IO.puts Drop.test_fun()
+
