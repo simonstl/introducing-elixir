@@ -3,4 +3,3 @@ defmodule Drop do
     :math.sqrt(2 * gravity * distance)
   end
 end
-
