@@ -24,7 +24,7 @@ Which planemo are you on?
 defp get_distance() do
    input = IO.gets("How far? (meters) > ")
    value = String.strip(input)
-   binary_to_integer(value)
+   String.to_integer(value)
 end
 
 defp char_to_planemo(char) do

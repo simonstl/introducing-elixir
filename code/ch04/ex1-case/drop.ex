@@ -5,7 +5,6 @@ defmodule Drop do
      :earth -> :math.sqrt(2 * 9.8 * distance)
      :moon  -> :math.sqrt(2 * 1.6 * distance)
      :mars  -> :math.sqrt(2 * 3.71 * distance)
-     _ -> "Which planet? What?"
     end
   end
   
