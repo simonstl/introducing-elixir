@@ -1,22 +1,24 @@
 defmodule DropServer do
-  use GenServer.Behaviour
+  use GenServer
   
-  defrecord State, count: 0
+  defmodule State do
+      defstruct count: 0
+  end
   
   # This is a convenience method for startup
   def start_link do
-    :gen_server.start_link({:local, __MODULE__}, __MODULE__, [], [])
+    GenServer.start_link(__MODULE__, [], [{:name, __MODULE__}])
   end
   
   # These are the callbacks that GenServer.Behaviour will use
   def init([]) do
-    {:ok, State.new()}
+    {:ok, %State{}}
   end
   
   def handle_call(_request, _from, state) do
     distance = _request
     reply = {:ok, fall_velocity(distance)}
-    new_state = State.new(count: state.count + 1)
+    new_state = %State{count: state.count + 1}
     {:reply, reply, new_state}
   end
   
@@ -43,4 +45,3 @@ defmodule DropServer do
   end
   
 end
-
