@@ -2,7 +2,7 @@ defmodule RecordDrop do
   require Planemo
   require Tower
 
-  def fall_velocity(t = Tower) do
+  def fall_velocity(t = Tower.tower()) do
     fall_velocity(Tower.tower(t, :planemo), Tower.tower(t, :height))
   end
   
