@@ -1,6 +1,6 @@
 defmodule StructDrop do
 
-  def fall_velocity(t = %Tower{}) do
+  def fall_velocity(t) do
     fall_velocity(t.planemo, t.height)
   end
   
