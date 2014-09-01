@@ -14,7 +14,8 @@ defmodule MphDrop do
         IO.puts("FAILURE. #{inspect(pid)} #{inspect(reason)}")
       {planemo, distance, velocity} ->
         mph_velocity = 2.23693629 * velocity
-        IO.puts("On #{planemo}, a fall of #{distance} meters yields a velocity of #{mph_velocity} mph.")
+        IO.puts("On #{planemo}, a fall of #{distance} meters")
+        IO.puts("yields a velocity of #{mph_velocity} mph.")
         convert(drop_pid)
     end
   end
