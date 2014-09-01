@@ -1,16 +1,16 @@
 defmodule DropSup do
-  use Supervisor.Behaviour
+  use Supervisor
   
   # convenience method for startup
   
   def start_link do
-    :supervisor.start_link({:local, __MODULE__}, __MODULE__, [])
+    Supervisor.start_link(__MODULE__, [], [{:name, __MODULE__}])
   end
   
   # supervisor callback
   
   def init([]) do
-    child = [worker(DropServer, [], [])]
+    child = [worker(DropServer, [], [])] # {:name, DropServer}
     supervise(child, [{:strategy, :one_for_one}, {:max_restarts, 1},
       {:max_seconds, 5}])
   end
