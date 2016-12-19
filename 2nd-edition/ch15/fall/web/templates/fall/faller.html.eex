@@ -1,0 +1,11 @@
+<h1>Speed at impact was <%= @speed %> m/s.</h1>
+
+<p>Fall again?</p>
+
+<%= form_for @conn, fall_path(@conn, :faller), [as: :calculation],
+fn f-> %>
+  <%= select f, :planemo, @choices %>
+  <%= text_input f, :distance %>
+  <%= submit "Calculate" %>
+<% end %>
+

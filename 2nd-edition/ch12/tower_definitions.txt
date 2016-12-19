@@ -1,0 +1,6 @@
+require Tower
+tower1 = Tower.tower()
+tower2 = Tower.tower(location: "Grand Canyon")
+tower3 = Tower.tower(location: "NYC", height: 241, name: "Woolworth Building")
+tower4 = Tower.tower location: "Rupes Altat 241", height: 500, planemo: :moon, name: "Piccolini View"
+tower5 = Tower.tower planemo: :mars, height: 500, name: "Daga Vallis", location: "Valles Marineris"
