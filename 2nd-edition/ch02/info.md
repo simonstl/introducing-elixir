@@ -1,4 +1,3 @@
-```code
 mix new ex1-drop --app drop
 mix new ex2-split --app drop
 mix new ex2-split --combined drop
@@ -10,6 +9,10 @@ mix new ex5-import-erlang2 --app drop && cd ex5-import-erlang2 && iex -S mix
 mix new ex6-defaults --app drop && cd ex6-defaults && iex -S mix
 mix new ex7-docs --app combined && cd ex7-docs && iex -S mix
 mix new ex8-doc-functions --app combined && cd ex8-doc-functions && iex -S mix
+mix new ex10-doc-specs --app combined && cd ex10-doc-specs && iex -S mix
+mix new ex11-doc-module --app combined && cd ex11-doc-module && iex -S mix
+
+mix new ex1-atoms --app combined && cd ex1-atoms && iex -S mix
 
 iex -S mix
 recompile
@@ -22,5 +25,6 @@ h Drop.fall_velocity
 #set utf-8 to cmd 
 chcp 65001
 
-```
+s(Drop.fall_velocity)
+i(Drop.fall_velocity)
 
