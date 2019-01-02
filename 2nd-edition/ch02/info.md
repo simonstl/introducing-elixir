@@ -1,3 +1,4 @@
+```code
 mix new ex1-drop --app drop
 mix new ex2-split --app drop
 mix new ex2-split --combined drop
@@ -28,3 +29,4 @@ chcp 65001
 s(Drop.fall_velocity)
 i(Drop.fall_velocity)
 
+```
