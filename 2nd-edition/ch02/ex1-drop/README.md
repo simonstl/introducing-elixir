@@ -1,6 +1,6 @@
 # Drop
 
-**TODO: Add description**
+**Drop application**
 
 ## Installation
 
