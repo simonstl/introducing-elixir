@@ -1,6 +1,6 @@
 # Drop
 
-**Drop application**
+**Drop application. Module for calculating and converting fall velocity.**
 
 ## Installation
 
