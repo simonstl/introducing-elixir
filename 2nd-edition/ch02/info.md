@@ -1,3 +1,4 @@
+```code
 mix new ex1-drop --app drop
 mix new ex2-split --app drop
 mix new ex2-split --combined drop
@@ -21,5 +22,5 @@ h Drop.fall_velocity
 #set utf-8 to cmd 
 chcp 65001
 
-
+```
 
