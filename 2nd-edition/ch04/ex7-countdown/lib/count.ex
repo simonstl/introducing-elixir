@@ -5,7 +5,7 @@ defmodule Count do
     countdown(from-1)
   end
 
-  def countdown(from) do
+  def countdown(_from) do
     IO.puts("blastoff!")
   end
 
