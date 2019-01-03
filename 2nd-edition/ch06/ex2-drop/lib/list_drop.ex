@@ -3,11 +3,11 @@ defmodule ListDrop do
     falls(list, [])
   end
 
-  def falls([], results) do
-    results
-  end
-
   def falls([head|tail], results) do
     falls(tail, [Drop.fall_velocity(head) | results])
+  end
+  
+  def falls([], results) do
+    results
   end
 end
