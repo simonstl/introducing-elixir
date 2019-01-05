@@ -1,4 +1,4 @@
-defmodule Planemo do
+defmodule Records do
   require Record
   Record.defrecord :planemo, [name: :nil, gravity: 0, diameter: 0,
     distance_from_sun: 0]
