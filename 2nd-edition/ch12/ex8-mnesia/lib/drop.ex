@@ -3,15 +3,15 @@ defmodule Drop do
   require Planemo
 
   def drop do
-    setup
-    handle_drops
+    setup()
+    handle_drops()
   end
 
   def handle_drops do
     receive do
       {from, planemo, distance} ->
         send(from, {planemo, distance, fall_velocity(planemo, distance)})
-        handle_drops
+        handle_drops()
     end
   end
 
