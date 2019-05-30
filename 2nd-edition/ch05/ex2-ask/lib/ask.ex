@@ -7,8 +7,9 @@ defmodule Ask do
   end
 
   defp get_planemo() do
-    IO.puts("""
-    Which planemo are you on?
+    IO.puts(
+     """
+     Which planemo are you on?
      1. Earth
      2. Earth's Moon
      3. Mars
@@ -21,7 +22,7 @@ defmodule Ask do
 
 defp get_distance() do
    input = IO.gets("How far? (meters) > ")
-   value = String.strip(input)
+   value = String.trim(input)
    String.to_integer(value)
 end
 
